@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    background: url(bg.JPG);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Picture {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.image {
+    display: block;
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.Picture:hover .image {
+    transform: scale(1.05);
+}
+
+.Picture:hover .overlay {
+    opacity: 1;
+}
